@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Download Zip File</title>
+</head>
+<body>
+<button id="downloadBtn">Download Zip File</button>
+<script>
+document.getElementById('downloadBtn').addEventListener('click', function() {
+    const downloadLink = document.createElement('a');
+    downloadLink.setAttribute('href', 'path/to/your/zip/file.zip');
+    downloadLink.setAttribute('download', 'downloaded_file.zip');
+    downloadLink.style.display = 'none';
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
+});
+</script>
+</body>
+</html>
